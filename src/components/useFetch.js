@@ -30,7 +30,7 @@ export const useFetch = (url) => {
             console.log(err.message);
           }
         });
-    }, 1000);
+    }, 500);
     return () => abortCont.abort();
   }, [url]);
   return { data, isPending, error };
