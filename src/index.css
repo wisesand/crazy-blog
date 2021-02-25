@@ -60,6 +60,17 @@
 .blog-details div {
   margin: 20px 0;
 }
+.blog-details button {
+  background: #f0becd;
+  color: rgb(19, 17, 17);
+  border: 2px;
+  padding: 8px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.blog-details button:hover {
+  background: #c8758e;
+}
 
 /* create new blog form */
 .create {
@@ -93,4 +104,13 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+img {
+  max-width: 100%;
+}
+.not-found {
+  font-size: 20px;
+  color: #1d98cb;
+  margin-bottom: 30px 20px;
+  text-align: center;
 }

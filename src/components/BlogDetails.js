@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const BlogDetails = () => {
@@ -7,6 +7,20 @@ const BlogDetails = () => {
   const { data: blog, isPending, error } = useFetch(
     `http://localhost:4040/blogs/${id}`
   );
+  const history = useHistory();
+  const deleteHandler = () => {
+    fetch(`http://localhost:4040/blogs/${id}`, {
+      method: "DELETE"
+    })
+      .then(() => {
+        console.log(`blog ${id} deleted`);
+        history.push("/");
+      })
+      .catch((err) => {
+        console.error(err.message);
+      });
+  };
+
   return (
     <div className="blog-details">
       {error && <div>{error}</div>}
@@ -20,6 +34,7 @@ const BlogDetails = () => {
           <div>{blog.body}</div>
         </article>
       )}
+      <button onClick={deleteHandler}>Delete Blog</button>
     </div>
   );
 };
