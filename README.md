@@ -8,29 +8,31 @@ This is simple blog website . I created this when I was learning React . The pro
 
 1. Make sure you have [Node.js](https://nodejs.org) installed
 
+2. Install the json server to fetch data from a server
+
 ```shell
 npm install -g json-server
 ```
 
-2. Clone the project to your local machine
+3. Clone the project to your local machine
 
 ```shell
 git clone https://github.com/wisesand/crazy-blog.git
 ```
 
-3. Go to the project directory and run
+4. Go to the project directory and run
 
 ```shell
 npm install
 ```
 
-4. Start the development server
+5. Start the development server
 
 ```shell
 npm start
 ```
 
-5. Watch the local json server by running the following
+6. Watch the local json server by running the following
 
 ```shell
 json-server --watch db.json --port 4040
